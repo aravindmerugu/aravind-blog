@@ -48,7 +48,6 @@ class BlogPost(db.Model):
     img_url = db.Column(db.String(250), nullable=False)
 
 
-# db.create_all()
 
 # CREATE TABLE IN DB
 class User(UserMixin, db.Model):
@@ -66,7 +65,7 @@ class Comments(db.Model):
     text = db.Column(db.Text, nullable=False)
     name = db.Column(db.Text, nullable=False)
 
-# db.create_all()
+db.create_all()
 
 # Line below only required once, when creating DB.
 # db.create_all()
