@@ -2,6 +2,8 @@ import smtplib
 import ssl
 from datetime import datetime
 import gunicorn
+import psycopg2
+from psycopg2 import Binary
 
 import bleach
 from flask import Flask, render_template, redirect, url_for, flash, request
@@ -21,10 +23,12 @@ Bootstrap(app)
 
 OWN_EMAIL = 'aravindkucet@gmail.com'
 OWN_PASSWORD = 'kfrumxkqvedzgvao'
+# OWN_PASSWORD = os.environ.get('OWN_PASSWORD')
 context = ssl.create_default_context()
 
 ##CONNECT TO DB
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///blog.db'
+# app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
