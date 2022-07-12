@@ -65,7 +65,7 @@ class Comments(db.Model):
     text = db.Column(db.Text, nullable=False)
     name = db.Column(db.Text, nullable=False)
 
-db.create_all()
+# db.create_all()
 
 # Line below only required once, when creating DB.
 # db.create_all()
