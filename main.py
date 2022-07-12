@@ -20,7 +20,7 @@ ckeditor = CKEditor(app)
 Bootstrap(app)
 
 OWN_EMAIL = 'aravindkucet@gmail.com'
-OWN_PASSWORD = 'kfrumxkqvedzgvao'
+OWN_PASSWORD = os.environ.get('OWN_PASSWORD')
 context = ssl.create_default_context()
 
 ##CONNECT TO DB
