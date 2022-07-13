@@ -68,7 +68,7 @@ class Comments(db.Model):
 # db.create_all()
 
 # Line below only required once, when creating DB.
-# db.create_all()
+db.create_all()
 
 ## strips invalid tags/attributes
 def strip_invalid_html(content):
